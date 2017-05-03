@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+// https://www.youtube.com/watch?v=eAYiCBb-5Q4&list=PLqq-6Pq4lTTZ_LyvzfrndUOkIvOF4y-_c&index=13
+// Filter
+var a =10;
+
+function myFunction() {
+    var b = a;
+    c = 100;   // This variable scope is global
+    console.log(b);
+    console.log(c);
+}
+myFunction();
+    document.write(a);
+    document.write('<br />');
+    document.write(c);
+    document.write('<br />');
+</script>
+
+
+<br />
+
+
+<h1>JS SCOPES</h1>
+<p id="demo"></p>
+
+<script>
+/*
+var a =10;
+
+function outer() {
+    var b = a;
+    c=100;
+    document.write(b);
+    document.write('<br />');
+    document.write(c);
+    function inner(){
+        var b = 20;
+        var c = b;
+        document.write('<br />');
+        document.write(c);
+        document.write('<br />');
+    }
+    inner();
+}
+outer();
+*/
+
+// https://www.youtube.com/watch?v=aO4QWSQW7yk&index=14&list=PLqq-6Pq4lTTZ_LyvzfrndUOkIvOF4y-_c
+// Explains about compailer ....
+var a =10;
+function outer() {
+    var b = a;
+    document.write(b);
+    document.write('<br />');    
+    function inner(){
+        var c = b;
+        document.write('<br /> :: ');
+        document.write(c);
+        document.write(' :: <br />');
+        var b = 20;   // Comment here and check the value
+    }
+    inner();
+}
+outer();
+
+///    eg 3
+
+console.log(xx);
+var xx =100;  // Comment me and uncomment me 
+
+</script>
+
+</body>
+</html>

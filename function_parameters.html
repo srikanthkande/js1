@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Functions ...</h1>
+
+<p>See console log.</p>
+
+<p id="demo"></p>
+
+<script>
+
+/*************
+// Unnamed paramenters
+// Eg :: 1
+function pick(object) {
+    console.log("Object %o", object); 
+    let result = Object.create(null);
+
+    // start at the second parameter
+    for (let i = 1, len = arguments.length; i < len; i++) {
+        result[arguments[i]] = object[arguments[i]];
+        console.log("argument "+ i + " :: "+ arguments[i]);
+    }
+
+    return result;
+}
+
+let book = {
+    title: "Understanding ECMAScript 6",
+    author: "Nicholas C. Zakas",
+    year: 2015
+};
+
+let bookData = pick(book, "author", "year");
+
+console.log(bookData.author);   // "Nicholas C. Zakas"
+console.log(bookData.year);     // 2015
+console.log("bookData %o", bookData);  
+
+*/
+
+
+// Unnamed paramenters :: ...keys is rest parameter
+function pick(object, ...keys) {
+    console.log("Object %o", object); 
+    let result = Object.create(null);
+
+    // start at the second parameter
+    for (let i = 0, len = keys.length; i < len; i++) {
+        result[keys[i]] = object[keys[i]];
+    }
+
+    return result;
+}
+
+let book = {
+    title: "Understanding ECMAScript 6",
+    author: "Nicholas C. Zakas",
+    year: 2015
+};
+
+let bookData = pick(book, "author", "year");
+
+console.log(bookData.author);   // "Nicholas C. Zakas"
+console.log(bookData.year);     // 2015
+console.log("bookData %o", bookData);  
+
+</script>
+</body>
+</html>

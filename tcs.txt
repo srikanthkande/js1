@@ -1,0 +1,109 @@
+bind 
+apply 
+call
+closure
+CSS :: clear both
+window event
+href how many areas we use
+IIFE
+namespace
+data types
+complex data types
+array 
+splice
+slice
+json parse
+     signify
+ajax types
+    Get/Post/Put
+How to upload file using ajax
+HTML :: simantic elements
+
+can we make <p> to in line element using CSS
+window width
+difference between IIFE and Closure
+difference between callback and Closure
+difference between IIFE and callback
+
+DOM elements
+    getelementbyid
+                class
+    what above returns ? which is faster
+getelementbyid is return object or array
+getelementbyclass is return object or array
+    can we use same class for many times ?
+    if we use what getelementbyclass will return
+How many ways we can create object
+Iniheritence ?
+how to apply inheritence  ?
+
+what is "this" in js... is it local or global ?
+what will happen if we use more global variable ?
+what is new in JS?
+why we need to use new?
+is local or global varible is faster ?
+
+
+is javascript object oriented ?
+how many ways we can create object in javascript
+define property in javascript
+how to hide properties in object js
+js truthy falsey
+js null vs undefined
+Is JS supports overloading ... if not how to do that ?
+JavaScript Hoisting
+
+javascript image carousel
+W3.CSS Slideshow
+css progress bar  :: https://www.w3schools.com/w3css/w3css_progressbar.asp
+https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_filters_dropdown_hover
+
+why header tag? earlier what we are used ?
+
+variable copy ... 
+JS Garbage collector ..
+
+setinterval
+clearinterval
+
+
+
+is javascript object oriented ?
+how many ways we can create object in javascript
+define property in javascript
+how to hide properties in object js
+js truthy falsey
+js null vs undefined
+
+js interrogated
+    https://www.youtube.com/watch?v=ol_su88I3kw&list=PLqq-6Pq4lTTYFJxC9NLJ7dSTI5Z1WWB6K&index=16
+    in another langualesd variable contains only one type value. but in JS it can change type. To know the type use "typeof"
+
+JS Type Coersion
+    Type Coersion and the === operator
+    a = 10, b = "10"
+    if(a == b) // ==
+    {
+        console.log("Equal ..."); // It prints
+    }
+    
+    if(a === b)  // ===
+    {
+        console.log("Equal ..."); // It will print ...
+    }
+
+    https://www.youtube.com/watch?v=IQoBAaxR3Ng&index=17&list=PLqq-6Pq4lTTYFJxC9NLJ7dSTI5Z1WWB6K
+
+// Array objects
+// https://www.youtube.com/watch?v=koO09c6mpgE&index=29&list=PLqq-6Pq4lTTYFJxC9NLJ7dSTI5Z1WWB6K
+
+Math functions
+Date functions
+new operator
+
+=> Scopes and closures
+=> Objects and Prototypes
+=> Asynchronous JS - call backs and promises
+=> Client side frameworks
+
+

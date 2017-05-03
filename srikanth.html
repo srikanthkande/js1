@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>TaggedTemplate ...</h1>
+
+<p>See console log.</p>
+
+<p id="demo"></p>
+
+<script>
+
+// Normal For loop
+var functions = [];
+for(var i=0; i<10; i++)
+{
+    functions.push( function(){ console.log("I value " + i); } );
+}
+
+functions.forEach(function(func) {
+    func();     // outputs the number "10" ten times
+});
+
+  
+// immediately-invoked function expressions IIFE
+var funcs = [];
+for(var i=0; i<10; i++)
+{
+    funcs.push( (function(value){   return function() { console.log("IIFE :: I value " + value);   }    })(i) );
+}
+
+funcs.forEach(function(func) {
+    func();     // outputs the number "10" ten times
+});
+
+
+// Normal For loop with Let
+var lfunctions = [];
+for(let i=0; i<10; i++)
+{
+    lfunctions.push( function(){ console.log("let :: I value " + i); } );
+}
+
+lfunctions.forEach(function(func) {
+    func();     // outputs the number "10" ten times
+});
+
+
+</script>
+
+</body>
+</html>

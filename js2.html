@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings</h1>
+
+<p>Strings can be written with double or single quotes.</p>
+
+<p id="demo"></p>
+
+<script>
+/*
+var gen = (function *(){
+  yield 1;
+  yield 2;
+  yield 3;
+})();
+
+for (let o of gen) {
+  console.log(o);
+  break;  // Closes iterator
+}
+
+// The generator should not be re-used, the following does not make sense!
+for (let o of gen) {
+  console.log(o); // Never called.
+}
+*/
+// For in
+
+
+var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+var text = "";
+var i;
+for (i = 0; i < cars.length; i++) {
+    // text += cars[i] + "<br>";
+    console.log(cars[i]);
+}
+// document.getElementById("demo").innerHTML = text;
+
+
+
+//===================
+let iterable1 = [101, 201, 301];
+
+for (let value of iterable1) {
+  value += 1;
+  console.log(parseInt(value));
+}
+
+for (let value in iterable1) {
+  console.log(parseInt(value));
+}
+
+// ====================
+
+var person = {fname:"John", lname:"Doe", age:25}; 
+
+var text = "";
+var x;
+for (x in person) {
+    // text += person[x];
+    console.log( person[x] );
+}
+ 
+// For of 
+let iterable = new Map([['a', {
+        a: true,
+        b: true,
+        c: true
+    }], ['b', {
+        a1: true,
+        b1: true,
+        c1: true
+    }], ['c', {
+        a2: true,
+        b2: true,
+        c2: true
+    }]]);
+
+for (let entry of iterable) {
+  console.log(entry);
+}
+// ['a', 1]
+// ['b', 2]
+// ['c', 3]
+
+for (let [key, value1] of iterable) {
+  console.log(value1);
+  console.log(value1.next().value); // 'yo'
+    
+}
+// 1
+// 2
+// 3
+ 
+
+</script>
+
+</body>
+</html>

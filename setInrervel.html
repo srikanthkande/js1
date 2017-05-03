@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+<br />
+<h1>
+    Sessions
+</h1>
+<p id="demo"></p>
+<script>
+// https://www.youtube.com/watch?v=S9ZYctNng8E&list=PLqq-6Pq4lTTZ_LyvzfrndUOkIvOF4y-_c&index=19
+ var sessionTimeout =1800;
+ var loggedIn = false;
+
+ var func = function(){
+    loggedIn = true;
+
+    Number.prototype.makeTwoDigits = function(){
+        return this.valueOf() > 9 ? "" + this.valueOf(): "0" + this.valueOf();
+    }
+
+    var sessionDisplayTime = function(){
+         var seconds = (sessionTimeout % 60);
+         var Minutes = (sessionTimeout / 60);
+         sessionTimeout--;
+         return  Math.floor( Minutes.makeTwoDigits() )+ " :" +seconds.makeTwoDigits();
+    }
+
+    // console.log(sessionTimeout--);
+    // console.log("\n");
+
+    // document.getElementById("demo").innerHTML  = sessionTimeout--;
+    document.getElementById("demo").innerHTML  = sessionDisplayTime();
+
+    if(sessionTimeout == 50)
+    {
+        console.log("Your session will be closed in " + sessionTimeout + "Sessions");
+    }
+
+    if(sessionTimeout < 0)
+    {
+        console.log("You have been logged out, Please loggin again ... ");
+        loggedIn = false;
+        clearInterval(session);
+        // logoutUserSession();
+    }
+ };
+
+ var session = setInterval(func, 1000);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1 id="myH1"></h1>
+<div id="myDIV"></div>
+
+<p><strong>Note:</strong> Server-Sent Events are not supported in Internet Explorer.</p>
+
+<script>
+let methodName = "sayName";
+
+class PersonClass {
+
+    constructor(name) {
+        this.name = name;
+    }
+
+    [methodName]() {
+        console.log(this.name);
+    }
+}
+
+let me = new PersonClass("Nicholas");
+me.sayName();           // "Nicholas"
+
+ 
+
+ 
+ 
+ 
+ class Collection {
+    console.log("asdsadsa");
+    constructor() {
+        this.items = [];
+    }
+
+    *[Symbol.iterator]() {
+        yield *this.items.values();
+    }
+}
+
+console.log("asdsadsa");
+
+var collection = new Collection();
+collection.items.push(1);
+collection.items.push(2);
+collection.items.push(3);
+
+for (let x of collection) {
+    console.log(x);
+}
+
+ 
+ 
+</script>
+
+</body>
+</html>

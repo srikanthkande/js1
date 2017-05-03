@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+<br />
+<h1>    
+    Scopes and Closures In-depth 17 - Introducing Closures
+
+</h1>
+<p id="demo"></p>
+<script>
+    // https://www.youtube.com/watch?v=Nj3_DMUXEbE&list=PLqq-6Pq4lTTZ_LyvzfrndUOkIvOF4y-_c&index=17
+    
+    // Module Pattren
+ a=10;
+ function outer(){
+    b =20;
+    var inner = function(){
+        a++;
+        b++;
+        console.log(a);
+        console.log(b);
+    }
+    return inner;
+ }
+ 
+ innerFn1 = outer();  // After this execution Garbage collector removes outer function as it doesn't have any refference
+ 
+ for(var i=0; i<10; i++) {
+    innerFn1();  // This function is holding the a, b reference so garbage collector will not removes a,b. State exists same ...
+ }
+console.log("\n \n a" + a);
+
+innerFn2 = outer();
+ 
+ for(var i=0; i<10; i++) {
+    innerFn2();
+ }
+ 
+console.log("\n \n  a" + a);
+</script>
+
+</body>
+</html>

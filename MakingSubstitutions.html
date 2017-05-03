@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Making Substitutions</h1>
+
+<p>See console log. <br /> Use bactics (` insted  double \" or single code \')</p>
+
+<p id="demo"></p>
+
+<script>
+
+// eg 1
+let name = "Nicholas",
+    message = "Hello, ${name}.";   // Used " code 
+console.log(message);       // "Hello, Nicholas.
+
+// Eg 2
+name = "Nicholas",
+    message = `Hello, ${name}.`; // Used ` code 
+console.log(message);       // "Hello, Nicholas."
+
+// Eg 3   
+let count = 10,
+price = 0.25,
+messageA = `${count} items cost $${(count * price).toFixed(2)}.`;
+console.log(messageA);       // "10 items cost $2.50."
+
+// Eg 4
+let message1 = `Multiline\nstring`,
+    message2 = String.raw`Multiline\nstring`;
+
+console.log(message1);          // "Multiline
+                                //  string"
+console.log(message2);          // "Multiline\\nstring"
+
+
+</script>

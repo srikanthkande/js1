@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings</h1>
+
+<p>Strings can be written with double or single quotes.</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 'John Doe';
+
+/*
+
+//Eg :: 1
+
+var funcs = [];
+
+for (var i = 0; i < 10; i++) {
+    funcs.push(function() { 
+    console.log(i); });
+}
+
+console.log("%o", funcs);
+
+funcs.forEach(function(func) {
+    func();     // outputs the number "10" ten times
+});
+*/
+
+/*
+//Eg :: 2 
+// IIFE 
+var funcs = [];
+
+for (var i = 0; i < 10; i++) {
+    funcs.push((function(value) {
+        return function() {
+            console.log("VALUE :: "+value);
+        }
+    }(i)));
+}
+
+funcs.forEach(function(func) {
+    func();     // outputs 0, then 1, then 2, up to 9
+});
+*/
+/*
+//Eg :: 3
+//With let, insted var
+var funcs = [];
+
+for (let i = 0; i < 10; i++) {
+    funcs.push(function() {
+        console.log(i);
+    });
+}
+
+funcs.forEach(function(func) {
+    func();     // outputs 0, then 1, then 2, up to 9
+})
+*/
+
+/*
+// Eg :: 4
+// With Objects
+var funcs = [],
+    object = {
+        a: true,
+        b: true,
+        c: true
+    };
+
+for (let key in object) {
+    funcs.push(function() {
+        console.log(key);
+    });
+}
+
+funcs.forEach(function(func) {
+    func();     // outputs "a", then "b", then "c"
+});
+*/
+
+/*
+// constant in loop  "Uncaught TypeError: Assignment to constant variable"
+var funcs = [];
+// throws an error 
+for (const i = 0; i < 10; i++) {
+    funcs.push(function() {
+        console.log(i);
+    });
+}
+*/
+
+/*
+var funcs = [],
+    object = {
+        a: true,
+        b: true,
+        c: true
+    };
+
+// doesn't cause an error
+for (const key in object) {
+    funcs.push(function() {
+        console.log(key);
+    });
+}
+
+funcs.forEach(function(func) {
+    func();     // outputs "a", then "b", then "c"
+});
+*/
+
+
+function* fibonacci() { // a generator function
+  let [prev, curr] = [1, 1];
+  while (true) {
+    [prev, curr] = [curr, prev + curr];
+    yield curr;
+  }
+}
+
+for (let n of fibonacci()) {
+  console.log(n);
+  // truncate the sequence at 1000
+  if (n >= 1000) {
+    break;
+  }
+}
+
+
+/*
+function* fibonacci() { // a generator function
+  let [prev, curr] = [1, 1];
+  while (curr <= 2000) {
+    [prev, curr] = [curr, prev + curr];
+    yield curr;
+  }
+}
+
+for (let n of fibonacci()) {
+  console.log(n);
+  // truncate the sequence at 1000
+  //if (n >= 1000) {
+    //break;
+  //}
+}
+*/
+
+</script>
+
+</body>
+</html>

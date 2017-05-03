@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="myH1"></h1>
+<div id="myDIV"></div>
+
+<p><strong>Note:</strong> Server-Sent Events are not supported in Internet Explorer.</p>
+
+<script>
+let propertyName = "html";
+
+class CustomHTMLElement {
+
+    constructor(element) {
+        this.element = element;
+    }
+
+    get [propertyName]() {
+        return this.element.innerHTML;
+    }
+
+    set [propertyName](value) {
+        this.element.innerHTML = value;
+    }
+}
+
+ele = document.getElementById("myDIV");
+obj = new CustomHTMLElement(ele);
+obj.html("Hello");
+</script>
+
+</body>
+</html>
+

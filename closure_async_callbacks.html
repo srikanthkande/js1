@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+<br />
+<h1>
+    Closures async callbacks ...
+</h1>
+<p id="demo"></p>
+<script>
+// https://www.youtube.com/watch?v=vYQ6ge4N4iM&list=PLqq-6Pq4lTTZ_LyvzfrndUOkIvOF4y-_c&index=22
+/***
+var i;
+
+var print = function (ab)
+{
+  var aa = ab;
+  console.log(aa);
+}
+
+for(i=0; i<10; i++)
+{
+  (function(){
+    setTimeout(print, 1000, i);
+  })();
+}
+*/
+
+/**
+var i;
+for(i=0; i<10; i++)
+{
+  (function(){
+    var temp = i;
+    setTimeout( function ()
+    {
+      console.log(temp);
+    } , 1000);
+  })();
+}
+*/
+
+var i;
+var print = function (ab)
+{
+  console.log(aa);
+}
+
+for(i=0; i<10; i++)
+{
+  (function(temp){
+    // var temp = i;
+    setTimeout( function ()
+    {
+      console.log(temp);
+    } , 1000);
+  })(i);
+}
+
+
+</script>
+
+</body>
+</html>

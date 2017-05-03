@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<br />
+<h1>
+    Objects ... 
+</h1>
+<p id="demo"></p>
+<script>
+    // https://www.youtube.com/watch?v=xvcndv8FNPc&index=39&list=PLqq-6Pq4lTTYFJxC9NLJ7dSTI5Z1WWB6K
+
+    var person = {
+        "firstName" : "Srikanth",
+        "lastName" : "Kande",
+        "getFullName" : function () { return this.firstName + "."  + this.lastName; },
+        "address" : {
+            "apartment" : "Legacy apartments",
+            "street" : "2727 Nelson road",
+            "state" : "CO"
+            },
+        "isFromState" : function ( userState ) { return (this.address.state === userState); }
+    }
+
+    var usState = person.isFromState( "CO" );
+    console.log( usState );
+    
+    var usState2 = person.isFromState( "CA" );
+    console.log( usState2 );
+</script>
+
+</body>
+</html>

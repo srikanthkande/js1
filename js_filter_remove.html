@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>TaggedTemplate ...</h1>
+
+<p>See console log.</p>
+
+<p id="demo"></p>
+
+<script>
+
+let people = [
+  { id: 1, name: 'serdar' },
+  { id: 9, name: 'Edward' },
+  { id: 15, name: 'Sharpe' },
+  { id: 5, name: 'Dave' },
+  { id: 6, name: 'Anglo' },
+  { id: 7, name: 'Mat' },
+  { id: 8, name: 'alex' },
+  { id: 22, name: 'Chris' },
+  { id: 300, name: 'brittany' }
+];
+
+
+String.prototype.capitalizeFirstLetter = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
+
+// Removing the one object from array using filter.
+let idToRemove = 5;
+console.log("people %o", people);
+// filteredPeople = people.filter((item) => item.id !== idToRemove);
+// console.log("filteredPeople %o", filteredPeople);
+people = people.filter((item) => item.id !== idToRemove);
+console.log("people %o", people);
+
+// Sorting the objects
+people = people.sort((item1, item2) => item1.name.toUpperCase() > item2.name.toUpperCase());
+// people = people.sort((item1, item2) => item1.name.capitalizeFirstLetter() > item2.name.capitalizeFirstLetter());
+console.log("people %o", people);
+
+
+// Removing the array of object from array using filter.
+let removePeople =  [
+  { id: 6, name: 'Anglo' },
+  { id: 7, name: 'Mat' },
+  { id: 8, name: 'alex' }
+];
+
+for (let rpeple of  removePeople)
+{
+    people = people.filter((item) => item.id !== rpeple.id);
+}
+
+console.log("people %o", people);
+
+(function(){ console.log("people from immedite function"); console.log("people %o", people); } )()
+
+ 
+
+</script>
+
+</body>
+</html>

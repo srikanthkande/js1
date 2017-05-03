@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+<br />
+<h1>
+    Objects ... 
+</h1>
+<p id="demo"></p>
+<script>
+    // https://www.youtube.com/watch?v=I0EZNZgJE28&list=PLqq-6Pq4lTTYFJxC9NLJ7dSTI5Z1WWB6K&index=25
+    var myObj1 = {}; // In-Line Object
+    var myObj1 = {
+    "prop1": "Hello ...",
+    "prop2" : "How are you ...",
+    "wish" :  function () { console.log( "Wish " + this.prop2 ); }
+    };
+    
+    var myObj2 =  myObj1;
+    myObj1.prop1 = "Good ...";
+    
+    myObj2.prop3 = "prop3";
+    
+    
+    // console.log( "myObj1 %o", myObj1 );
+    // console.log( myObj1.prop1 );
+    
+    // console.log( "myObj2 %o", myObj2 );
+    // console.log( myObj2.prop1 );
+    
+    if(myObj2 ===  myObj1)
+    {
+       console.log( "equal ..." ); 
+    }
+
+    // myObj1.wish();
+    myObj1 = {};
+
+    console.log( "myObj1 %o", myObj1 );
+    console.log( "myObj2 %o", myObj2 );
+    
+    myObj2.wish();
+
+
+</script>
+
+</body>
+</html>

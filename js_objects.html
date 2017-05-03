@@ -1,0 +1,29 @@
+<script>
+// JS Objects
+    var myObj = {}; // In-Line Object
+    myObj.prop1 = "Hello ...";
+    myObj.prop2 = "How are you ...";
+    console.log( myObj );
+    console.log( myObj.prop1 );
+
+// Object Literal
+    var myObj = {
+    "prop1" : "Hello again ..",
+    "prop1" : "Hello again ..",
+    "1": "one"
+    }; 
+    
+// Dot and squre bracket notation 
+    console.log( myObj.prop1 );
+    console.log( myObj["prop1"] );
+    
+    console.log( myObj.1 );   // Will not work ...  Invalid identifier
+    console.log( myObj["1"] );
+    
+    // when to use  []
+    // 1)  property name is invalid or reserved keywords ... property name starts with number ... property name is dynamic ..
+    // [] is not optimize .. run time engine may not be able to optimize [] notation
+    // dot and [] are interchangable ...
+    
+</script>
+

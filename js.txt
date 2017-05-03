@@ -1,0 +1,53 @@
+document.querySelector
+    https://codepen.io/srikanthkande/pen/xdKwLw
+let
+Temporal Dead Zone
+js New
+js call 
+js constructor
+js expressions
+js promiss
+intercept
+Expresion
+super 
+
+Concise Methods
+
+
+setPrototypeOf
+getPrototypeOf
+
+Object.is
+Object.assign
+Object.create
+
+Object Destructuring
+
+accessor property 
+    mixin pattern
+
+
+array.concat
+
+Object.getOwnPropertyDescriptor
+Object.defineProperty
+
+Array
+ArrayBuffer (discussed in Chapter 10)
+Map
+Promise
+RegExp
+Set
+Typed Arrays (discussed in Chapter 10)
+
+GULP :: gulp gives you fast builds 
+
+BOWER :: Keeping track of all these packages and making sure they are up to date (or set to the specific versions you need) 
+is tricky. Bower to the rescue! 
+    Bower can manage components that contain HTML, CSS, JavaScript, fonts or even image files. Bower doesn’t concatenate or
+minify code or do anything else - it just installs the right versions of the packages you need and their dependencies.
+
+Grunt :: task runner
+    In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, 
+    unit testing, linting, etc, the easier your job becomes. After you've configured it through a Gruntfile, a task runner 
+    can do most of that mundane work for you—and your team—with basically zero effort.

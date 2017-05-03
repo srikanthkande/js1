@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>In this example, myFunction is a function constructor:</p>
+
+<p id="demo"></p>
+
+<script>
+let person = {
+    "name" : "Person",
+    getGreeting() {
+        return "Hello";
+    }
+};
+
+// prototype is person
+let friend = {
+    getGreeting() {
+        return super.getGreeting() + ", hi!" + " super.. : " + super.name;
+    }
+};
+Object.setPrototypeOf(friend, person);
+
+
+// prototype is friend
+let relative = Object.create(friend);
+
+
+relative["name"] = "Relative";
+relative["getGreeting"] =  () => "Hello";
+        
+ console.log(person);                  // "Hello, hi!"
+// console.log(person.getGreeting());                  // "Hello"
+ console.log(friend);                  // "Hello, hi!"
+// console.log(relative.getGreeting());                // "Hello, hi!"
+
+console.log(relative);  // "Hello, hi!"
+</script>
+
+</body>
+</html>
+

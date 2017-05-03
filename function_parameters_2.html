@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>TaggedTemplate ...</h1>
+
+<p>See console log.</p>
+
+<p id="demo"></p>
+
+<script>
+
+let values = [-25, -50, -75, -100]
+
+console.log(Math.max(...values)); 
+console.log(Math.max(-25, -50, -75, -100)); 
+
+
+    
+function doSomething() {
+    // ...
+}
+
+var doAnotherThing = function() {
+    // ...
+};
+
+console.log(doSomething.name);          // "doSomething"
+console.log(doAnotherThing.name);       // "doAnotherThing"
+
+    
+    
+var doSomething = function() {
+    // ...
+};
+
+console.log(doSomething.name);
+console.log(doSomething.bind().name);   // "bound doSomething"
+console.log((new Function()).name);     // "anonymous"
+
+
+var myObject = {
+firstName:"John",
+lastName: "Doe",
+fullName: function () {
+    return this;
+    }
+}
+
+myObject.fullName();
+console.log(myObject);
+    
+/***
+    
+function Person(name) {
+    this.name = name;
+}
+
+var person = new Person("Nicholas");
+var notAPerson = Person("Nicholas");
+
+console.log(person);        // "[Object object]"
+console.log(notAPerson);    // "undefined"
+*/
+
+function Person(name) {
+    if (this instanceof Person) {
+        this.name = name;   // using new
+    } else {
+        throw new Error("You must use new with Person.")
+    }
+}
+
+var person = new Person("Nicholas");
+console.log(person);        // "[Object object]"
+
+var notAPerson = Person.call(person, "Michael");    // works!
+console.log(notAPerson); 
+
+var notAPerson1 = Person("Nicholas Michael");  // throws error
+console.log(notAPerson1); 
+
+
+    
+</script>
+
+</body>
+</html>
